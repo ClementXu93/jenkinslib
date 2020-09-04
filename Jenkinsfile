@@ -26,7 +26,7 @@ pipeline {
         //下载代码
         stage("GetCode"){ //阶段名称
            // when { environment name: 'test', value: 'abcd' }
-            when { branch 'test'}
+            when { branch 'master'}
             steps{  //步骤
                 timeout(time:5, unit:"MINUTES"){   //步骤超时时间
                     script{ //填写运行代码
